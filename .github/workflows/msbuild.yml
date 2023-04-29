@@ -17,3 +17,9 @@ jobs:
       - name: Build solution
         run: |
           msbuild.exe /p:Configuration=Release /p:Platform=x86 ./ZenithInjector.sln
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Build Artifacts
+          path: ./Release/x86/
+
