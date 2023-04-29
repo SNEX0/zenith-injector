@@ -1,0 +1,19 @@
+name: Build Visual Studio Solution
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+env:
+  BUILD_CONFIGURATION: Release
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup MSBuild.exe path
+        uses: microsoft/setup-msbuild@v1.0.2
+      - name: Build solution
+        run: |
+          msbuild.exe /p:Configuration=Release /p:Platform=x86 ./ZenithInjector.sln
