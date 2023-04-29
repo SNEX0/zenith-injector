@@ -7,6 +7,9 @@ on:
 env:
   BUILD_CONFIGURATION: Release
 
+permissions:
+  actions: write
+
 jobs:
   build:
     runs-on: windows-latest
