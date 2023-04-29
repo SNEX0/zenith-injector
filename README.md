@@ -31,5 +31,6 @@ cheat_method=manualmap
 # FAQ
 1. Injection fails? Maybe your DLL is broken or the injection method is not supported by the cheat
 2. Steam crashes while using VAK.dll? Run the injector as admin
+3. Manualmap crashes and LoadLibrary doesn't work? Make sure to be compiling in Release x86
 
 This doesn't help? Open an issue
